@@ -1,11 +1,15 @@
-
 import './App.css';
+import MainLayout from './components/MainLayout';
+import Statistic from './components/Statistic';
 
 function App() {
   return (
-    <div className="App">
-      <h1>HELLO WORLD!</h1>
-    </div>
+   
+  <MainLayout>
+      <Statistic/>  
+   </MainLayout>
+  
+   
   );
 }
 

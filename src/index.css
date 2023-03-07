@@ -1,13 +1,64 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import-normalize;
+@font-face {
+  font-family: "Metropolis";
+  src: url("./fonts/Metropolis-Regular.otf") format("otf"),
+    url("./fonts/Metropolis-Medium.otf") format("otf");
+    font-weight: var(--fw-regular);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  /* Typography */
+  --family: "Metropolis", sans-serif;
+  --fw-regular: 400;
+  --fw-medium: 500;
+
+  /* Color */
+  --color-bg: black;
+  --color-bg-card: #242731;
+  --color-bg-base: #191c23;
+  --color-bg-active: #8941ff;
+  --color-primary: #ffffff;
+  --color-secondary: rgba(255, 255, 255, 0.6);
+  --color-icon-base: #7D869E;
+  --color-icon-active: #FFFFFF;
 }
+
+body {
+  margin: 0;
+  font-family: var(--family);
+  color: var(--color-primary);
+  font-weight: var(--fw-regular);
+  background-color: var(--color-bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+
