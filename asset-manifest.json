@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/dashboard/static/css/main.10545c95.css",
-    "main.js": "/dashboard/static/js/main.80745926.js",
+    "main.js": "/dashboard/static/js/main.5c3e9d8f.js",
     "static/js/787.545aecf5.chunk.js": "/dashboard/static/js/787.545aecf5.chunk.js",
     "static/media/Metropolis-Medium.otf": "/dashboard/static/media/Metropolis-Medium.cdcce86268fb4a504ff5.otf",
     "static/media/Metropolis-Regular.otf": "/dashboard/static/media/Metropolis-Regular.67a1988d7b65b0aaa16d.otf",
     "static/media/setting.svg": "/dashboard/static/media/setting.ed25a9f5b794705acb11363d4371fcb1.svg",
+    "static/media/setting-light.svg": "/dashboard/static/media/setting-light.86be8be947c3b8f509c03d67be22ea2b.svg",
     "static/media/share.svg": "/dashboard/static/media/share.23b2e693c1a1845ba2308aa3230c2a97.svg",
     "static/media/wear-tear.svg": "/dashboard/static/media/wear-tear.824031b0d8799491cc4b9a140237a2af.svg",
     "static/media/user.svg": "/dashboard/static/media/user.121dfa5a86bc9f21569e4df79f05907d.svg",
@@ -19,12 +20,13 @@
     "static/media/settings.svg": "/dashboard/static/media/settings.5d148f2f1feeca8c411cfd5d4274788a.svg",
     "static/media/dashboard.svg": "/dashboard/static/media/dashboard.8af513da52ef450c80e1c9441083e4b1.svg",
     "static/media/user_light.svg": "/dashboard/static/media/user_light.8dde2b7ce2a10f218aad328e6c8f9f4e.svg",
+    "static/media/arrow-down.svg": "/dashboard/static/media/arrow-down.08319377d0864961e7dc1f6adea2ee85.svg",
     "main.10545c95.css.map": "/dashboard/static/css/main.10545c95.css.map",
-    "main.80745926.js.map": "/dashboard/static/js/main.80745926.js.map",
+    "main.5c3e9d8f.js.map": "/dashboard/static/js/main.5c3e9d8f.js.map",
     "787.545aecf5.chunk.js.map": "/dashboard/static/js/787.545aecf5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.10545c95.css",
-    "static/js/main.80745926.js"
+    "static/js/main.5c3e9d8f.js"
   ]
 }
