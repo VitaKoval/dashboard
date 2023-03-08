@@ -1,15 +1,30 @@
 {
   "files": {
-    "main.css": "/dashboard/static/css/main.073c9b0a.css",
-    "main.js": "/dashboard/static/js/main.03e3df61.js",
+    "main.css": "/dashboard/static/css/main.10545c95.css",
+    "main.js": "/dashboard/static/js/main.80745926.js",
     "static/js/787.545aecf5.chunk.js": "/dashboard/static/js/787.545aecf5.chunk.js",
+    "static/media/Metropolis-Medium.otf": "/dashboard/static/media/Metropolis-Medium.cdcce86268fb4a504ff5.otf",
+    "static/media/Metropolis-Regular.otf": "/dashboard/static/media/Metropolis-Regular.67a1988d7b65b0aaa16d.otf",
+    "static/media/setting.svg": "/dashboard/static/media/setting.ed25a9f5b794705acb11363d4371fcb1.svg",
+    "static/media/share.svg": "/dashboard/static/media/share.23b2e693c1a1845ba2308aa3230c2a97.svg",
+    "static/media/wear-tear.svg": "/dashboard/static/media/wear-tear.824031b0d8799491cc4b9a140237a2af.svg",
+    "static/media/user.svg": "/dashboard/static/media/user.121dfa5a86bc9f21569e4df79f05907d.svg",
+    "static/media/logo.svg": "/dashboard/static/media/logo.9bf05246b5429663d580f91b85583b76.svg",
+    "static/media/keyhole.svg": "/dashboard/static/media/keyhole.98e27adc53f95c84752200013035bce0.svg",
+    "static/media/product.svg": "/dashboard/static/media/product.da1d437fb71ab0f49ce76f7d414a3104.svg",
+    "static/media/game.svg": "/dashboard/static/media/game.983ffd1b601ccb1141dd8bf28f8a0826.svg",
+    "static/media/games.svg": "/dashboard/static/media/games.9ee3f09bec1047c1858f04f6a3f505f2.svg",
+    "static/media/cards.svg": "/dashboard/static/media/cards.6fe2410756d47be4ed0315b1c3e35c92.svg",
     "index.html": "/dashboard/index.html",
-    "main.073c9b0a.css.map": "/dashboard/static/css/main.073c9b0a.css.map",
-    "main.03e3df61.js.map": "/dashboard/static/js/main.03e3df61.js.map",
+    "static/media/settings.svg": "/dashboard/static/media/settings.5d148f2f1feeca8c411cfd5d4274788a.svg",
+    "static/media/dashboard.svg": "/dashboard/static/media/dashboard.8af513da52ef450c80e1c9441083e4b1.svg",
+    "static/media/user_light.svg": "/dashboard/static/media/user_light.8dde2b7ce2a10f218aad328e6c8f9f4e.svg",
+    "main.10545c95.css.map": "/dashboard/static/css/main.10545c95.css.map",
+    "main.80745926.js.map": "/dashboard/static/js/main.80745926.js.map",
     "787.545aecf5.chunk.js.map": "/dashboard/static/js/787.545aecf5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.03e3df61.js"
+    "static/css/main.10545c95.css",
+    "static/js/main.80745926.js"
   ]
 }
