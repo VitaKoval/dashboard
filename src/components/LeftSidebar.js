@@ -18,7 +18,7 @@ import { ReactComponent as Settings } from '../images/icons/settings.svg';
 function LeftSidebar() {
   return (
     <ContainerLeftSidebar>
-      <Flex column center>
+      <Flex column align='center'>
         <LogoIcon />
         <ListLeftSidebar>
           <ItemLeftSidebar><Dashboard/></ItemLeftSidebar>

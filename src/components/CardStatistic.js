@@ -1,19 +1,26 @@
 import React from "react";
-import { CardStatisticContainer } from "../ui/CardStatistic.styled";
+import {
+  CardStatisticContainer,
+  IconContainer,
+  NumberDescription,
+  NumberStatistic,
+} from "../ui/CardStatistic.styled";
 import Flex from "./Flex";
 
-function CardStatistic() {
-    return (
-       <CardStatisticContainer>
-            <Flex center>
-        <div>icon</div>
+
+function CardStatistic({ icon, statistic = "0", children, color }) {
+
+  return (
+    <CardStatisticContainer>
+      <Flex align='flex-start'>
+        <IconContainer color={color}>{icon}</IconContainer>
         <Flex column center>
-            <div>14</div>
-            <div>IAM Users</div>
+          <NumberStatistic>{statistic}</NumberStatistic>
+          <NumberDescription>{children}</NumberDescription>
         </Flex>
-            </Flex>
-       </CardStatisticContainer>
-    )
+      </Flex>
+    </CardStatisticContainer>
+  );
 }
 
 export default CardStatistic;

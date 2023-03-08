@@ -1,15 +1,13 @@
-import './App.css';
-import MainLayout from './components/MainLayout';
-import Statistic from './components/Statistic';
+import "./App.css";
+import MainLayout from "./components/MainLayout";
+
+import RoutesPage from "./Routes";
 
 function App() {
   return (
-   
-  <MainLayout>
-      <Statistic/>  
-   </MainLayout>
-  
-   
+    <MainLayout>
+      <RoutesPage />
+    </MainLayout>
   );
 }
 

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerHeader = styled.div`
-padding: 16px 48px 16px 0;
+padding: 16px 48px 16px 32px;
 `
 
 export const TitleHeader = styled.h2`
@@ -19,6 +19,8 @@ padding: 6px;
 border-radius: 50%;
 background-color: var(--color-bg-card);
 margin-right: 12px;
+
+stroke: var(--color-primary);
 `
 
 export const UsernameHeader = styled.p`

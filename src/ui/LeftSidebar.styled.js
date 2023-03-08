@@ -4,7 +4,7 @@ export const ContainerLeftSidebar = styled.div`
   background-color: var(--color-bg-card);
   padding: 14px 18px;
   width: 84px;
-  margin-right: 32px;
+  /* margin-right: 32px; */
 `;
 export const ListLeftSidebar = styled.ul`
   margin-top: 46px;

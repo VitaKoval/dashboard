@@ -12,7 +12,7 @@ import { ReactComponent as UserLight } from "../images/icons/user_light.svg";
 function Header() {
   return (
     <ContainerHeader>
-      <Flex center>
+      <Flex align='center'>
         <TitleHeader>DASHBOARD</TitleHeader>
         <IconHeaderContainer>
           <UserLight />
