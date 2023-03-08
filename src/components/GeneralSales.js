@@ -1,10 +1,17 @@
 import React from "react";
+import { GeneralSalesContainer } from "../ui/GeneralSales.styled";
+import TopBlock from "./TopBlock";
 import Wrapper from "./Wrapper";
+// icons
+import {ReactComponent as SettingLight} from '../images/icons/setting-light.svg'
 
 function GeneralSales() {
     return (
-        <Wrapper>
-            <h1>General Sales/Time</h1>
+        <Wrapper box>
+            <GeneralSalesContainer>
+                <TopBlock title='General Sales / Time' chois= 'Table settings' icon={<SettingLight/>}/>
+            </GeneralSalesContainer>
+           
         </Wrapper>
     )
 }

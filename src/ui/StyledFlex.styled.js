@@ -8,4 +8,5 @@ justify-content: ${props => props.justify || 'stretch'};
 flex-grow: ${props => props.flexGrow};
 width: ${props => props.width};
 height: ${({ height }) => height};
+overflow: ${props => props.overflow};
 `
