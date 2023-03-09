@@ -9,7 +9,7 @@ import Flex from "./Flex";
 
 
 function CardStatistic({ icon, statistic = "0", children, color }) {
-
+ 
   return (
     <CardStatisticContainer>
       <Flex align='flex-start'>

@@ -26,6 +26,7 @@ export const ChoiceDataType = styled.p`
 display: flex;
 align-items: center;
 justify-content: center;
+margin: 0;
 
 font-size: 13px;
 line-height: 1.54;
