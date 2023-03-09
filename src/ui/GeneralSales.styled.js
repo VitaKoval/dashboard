@@ -1,9 +1,26 @@
 import styled from "styled-components";
 
-export const GeneralSalesContainer = styled.div`
-padding: 24px 32px 32px 32px;
-border-radius: 4px;
-background-color: var(--color-bg-card);
+export const Table = styled.table`
+`
+export const TableHeader = styled.thead`
+`
 
-height: 480px;
+export const TableRow = styled.tr`
+
+`
+
+export const TableHeadCell = styled.th`
+font-weight: var(--fw-medium);
+font-size: 11px;
+line-height: 1.09;
+color: var(--color-secondary);
+`
+
+export const TableBody = styled.tbody`
+
+`
+
+export const Td = styled.td`
+font-size: 13px;
+line-height: 1.54;
 `

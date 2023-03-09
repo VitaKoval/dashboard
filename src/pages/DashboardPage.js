@@ -7,6 +7,9 @@ import BlockDashboard from "../components/BlockDashboard";
 import GameStatsLocation from "../components/GameStatsLocation";
 
 function DashboardPage(params) {
+
+
+  
   return (
   
     <Wrapper>
