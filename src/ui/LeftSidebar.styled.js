@@ -4,6 +4,7 @@ export const ContainerLeftSidebar = styled.div`
   background-color: var(--color-bg-card);
   padding: 14px 18px;
   width: 84px;
+  height: 100%;
 
   position: relative;
 `;

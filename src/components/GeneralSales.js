@@ -4,15 +4,19 @@ import TopBlock from "./TopBlock";
 import Wrapper from "./Wrapper";
 // icons
 import {ReactComponent as SettingLight} from '../images/icons/setting-light.svg'
+import Flex from "./Flex";
 
 function GeneralSales() {
     return (
-        <Wrapper box>
-            <GeneralSalesContainer>
-                <TopBlock title='General Sales / Time' chois= 'Table settings' icon={<SettingLight/>}/>
-            </GeneralSalesContainer>
-           
-        </Wrapper>
+        <>
+      <TopBlock title='General Sales / Time' choice='Table settings' icon={<SettingLight/>}/>
+      <Flex>
+        <h1> Loading...</h1>
+      </Flex>
+      
+      
+   </>
+       
     )
 }
 

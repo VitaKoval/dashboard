@@ -9,4 +9,6 @@ flex-grow: ${props => props.flexGrow};
 width: ${props => props.width};
 height: ${({ height }) => height};
 overflow: ${props => props.overflow};
+position: ${props => props.position};
+
 `

@@ -22,6 +22,8 @@
   --color-icon-base: #7D869E;
   --color-icon-active: #FFFFFF;
 
+  --vh: 1080px;
+
 }
 
 body {
