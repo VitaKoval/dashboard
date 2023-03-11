@@ -7,7 +7,7 @@ import Flex from "../components/Flex";
 // components
 import DashboardStatistics from "../components/DashboardStatistics";
 import DashboardCard from "../components/DashboardCard";
-import DashboardGameStatsCharts from "../components/DashboardGameStatsCharts";
+import DashboardGameStatsChart from "../components/DashboardGameStatsChart";
 import DaschboardGameStatsPieChart from "../components/DaschboardGameStatsPieChart";
 import DashboardGeneralSalesTable from "../components/DashboardGeneralSalesTable";
 
@@ -22,7 +22,7 @@ function DashboardPage(params) {
         <SectionLayoutWrapper>
           <Flex gap={16}>
             <DashboardCard flex={3} height={344}>
-              <DashboardGameStatsCharts />
+              <DashboardGameStatsChart />
             </DashboardCard>
             <DashboardCard flex={1}>
               <DaschboardGameStatsPieChart />

@@ -7,7 +7,7 @@ const useDashboardData = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://vindev.cx.ua/dashboard")
+    fetch("https://vindev.cx.ua/dashboard")
       .then((res) => res.json())
       .then((result) => {
         setData(result);
