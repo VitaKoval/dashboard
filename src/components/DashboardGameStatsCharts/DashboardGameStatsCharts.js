@@ -1,19 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import { nanoid } from 'nanoid';
 import Flex from "../Flex";
 
-import {
-  CheckBox,
-  Rating,
-  Specification,
-  UserDate,
-  UserName,
-  UserSpecification,
-} from "./styled";
+import { CheckBox, Rating, Specification, UserDate, UserName } from "./styled";
+import CardHeader from "../CardHeader/CardHeader";
+import DashboardContext from "../../context/DashboardContext";
 // icons
 import { ReactComponent as Select } from "../../images/icons/Select.svg";
-import CardHeader from "../CardHeader/CardHeader";
+import ChartStats from "../ChartStats";
 
 function DashboardGameStatsCharts() {
+  const { data, error, loading } = useContext(DashboardContext);
+
   // useGameStatsConfig - useState {blue: false, red: true }
   // {}
   // CheckBox value
@@ -21,14 +19,18 @@ function DashboardGameStatsCharts() {
 
   return (
     <Flex column>
-      <CardHeader title="Game Stats" text="Data type" selectedFilterValue="Graph" />
-      <Flex>
-        <Flex flexGrow={8} style={{ marginRight: 21 }}>
-          Loading...
+      <CardHeader
+        title="Game Stats"
+        text="Data type"
+        selectedFilterValue="Graph"
+      />
+      <Flex gap={50}>
+        <Flex >
+          {!loading && <ChartStats data={data.chartData}/>}
         </Flex>
 
-        <Flex flexGrow={1} style={{ marginRight: 24 }}>
-          {/* Checkbox */}
+        <Flex>
+          {/* CheckboxStats */}
           <Flex column gap={16}>
             <Flex>
               <CheckBox stroke="blue" fill="blue">
@@ -79,9 +81,16 @@ function DashboardGameStatsCharts() {
         </Flex>
         <Flex flexGrow={1} gap={16}>
           {/* map array with "users"*/}
-          <Flex column>
-            <UserName>Naperville</UserName>
-            <UserDate>15/08/2017</UserDate>
+          <Flex column gap={16} >
+            {!loading &&
+              data.users.map(({ name, date }) => {
+                return (
+                  <Flex column key={nanoid()}>
+                    <UserName>{name}</UserName>
+                    <UserDate>{ date}</UserDate>
+                  </Flex>
+                );
+              })}
           </Flex>
         </Flex>
       </Flex>
