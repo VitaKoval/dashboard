@@ -1,44 +1,41 @@
 import React from "react";
-import Statistic from "../components/Statistic";
-import Wrapper from "../components/Wrapper";
-import GameStatsDataType from "../components/GameStatsDataType";
-import GeneralSales from "../components/GeneralSales";
-import BlockDashboard from "../components/BlockDashboard";
-import GameStatsLocation from "../components/GameStatsLocation";
+import DashboardStateContext from "../context/DashboardState";
 
-import DashboardState from "../context/DashboardState";
-// import useDashboardData from "../hooks/useDashboardData";
+import PageLayoutWrapper from "../components/PageLayoutWrapper";
+import SectionLayoutWrapper from "../components/SectionLayoutWrapper";
+import Flex from "../components/Flex";
+// components
+import DashboardStatistics from "../components/DashboardStatistics";
+import DashboardCard from "../components/DashboardCard";
+import DashboardGameStatsCharts from "../components/DashboardGameStatsCharts";
+import DaschboardGameStatsPieChart from "../components/DaschboardGameStatsPieChart";
+import DashboardGeneralSalesTable from "../components/DashboardGeneralSalesTable";
 
 function DashboardPage(params) {
-
   return (
-    <DashboardState>
-      <Wrapper>
-        <Statistic />
-        <Wrapper box>
-          <div style={{ display: "flex", gap: 8 }}>
-            <div style={{ flexGrow: 3 }}>
-              <BlockDashboard height="344px">
-                <GameStatsDataType />
-              </BlockDashboard>
-            </div>
+    <DashboardStateContext>
+      <PageLayoutWrapper>
+        <SectionLayoutWrapper>
+          <DashboardStatistics />
+        </SectionLayoutWrapper>
 
-            <div style={{ flexGrow: 1 }}>
-              <BlockDashboard>
-                <GameStatsLocation />
-              </BlockDashboard>
-            </div>
-          </div>
-        </Wrapper>
-        <Wrapper box>
-          <div style={{ flexGrow: 4 }}>
-            <BlockDashboard height="480px">
-              <GeneralSales />
-            </BlockDashboard>
-          </div>
-        </Wrapper>
-      </Wrapper>
-    </DashboardState>
+        <SectionLayoutWrapper>
+          <Flex gap={16}>
+            <DashboardCard flex={3} height={344}>
+              <DashboardGameStatsCharts />
+            </DashboardCard>
+            <DashboardCard flex={1}>
+              <DaschboardGameStatsPieChart />
+            </DashboardCard>
+          </Flex>
+        </SectionLayoutWrapper>
+        <SectionLayoutWrapper>
+          <DashboardCard height={480}>
+            <DashboardGeneralSalesTable />
+          </DashboardCard>
+        </SectionLayoutWrapper>
+      </PageLayoutWrapper>
+    </DashboardStateContext>
   );
 }
 

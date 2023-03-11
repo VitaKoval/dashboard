@@ -2,7 +2,7 @@ import React from "react";
 import useDashboardData from "../hooks/useDashboardData";
 import DashboardContext from "./DashboardContext";
 
-const DashboardState = ({ children }) => {
+const DashboardStateContext = ({ children }) => {
   const { data, error, loading } = useDashboardData();
 
   return (
@@ -12,4 +12,4 @@ const DashboardState = ({ children }) => {
   );
 };
 
-export default DashboardState;
+export default DashboardStateContext;
