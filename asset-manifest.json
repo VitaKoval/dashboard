@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dashboard/static/css/main.ec478b6d.css",
-    "main.js": "/dashboard/static/js/main.74cb0de1.js",
+    "main.js": "/dashboard/static/js/main.fdf2bcef.js",
     "static/js/787.545aecf5.chunk.js": "/dashboard/static/js/787.545aecf5.chunk.js",
     "static/media/Metropolis-Medium.otf": "/dashboard/static/media/Metropolis-Medium.cdcce86268fb4a504ff5.otf",
     "static/media/Metropolis-Regular.otf": "/dashboard/static/media/Metropolis-Regular.67a1988d7b65b0aaa16d.otf",
@@ -24,11 +24,11 @@
     "static/media/action-menu.svg": "/dashboard/static/media/action-menu.6e2f6a1a9530698de39f971b6a4157e1.svg",
     "static/media/arrow-down.svg": "/dashboard/static/media/arrow-down.08319377d0864961e7dc1f6adea2ee85.svg",
     "main.ec478b6d.css.map": "/dashboard/static/css/main.ec478b6d.css.map",
-    "main.74cb0de1.js.map": "/dashboard/static/js/main.74cb0de1.js.map",
+    "main.fdf2bcef.js.map": "/dashboard/static/js/main.fdf2bcef.js.map",
     "787.545aecf5.chunk.js.map": "/dashboard/static/js/787.545aecf5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ec478b6d.css",
-    "static/js/main.74cb0de1.js"
+    "static/js/main.fdf2bcef.js"
   ]
 }
