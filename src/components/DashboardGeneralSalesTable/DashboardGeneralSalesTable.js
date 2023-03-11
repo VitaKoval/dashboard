@@ -1,12 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext} from "react";
 import DashboardContext from "../../context/DashboardContext";
 
 import {
-  Table,
   TableCell,
   Image,
-  TableColumn,
-  TableHeader,
   TableRow,
 } from "./styled";
 

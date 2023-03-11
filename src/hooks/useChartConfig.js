@@ -26,7 +26,7 @@ const useChartConfig = (chartData) => {
       });
     }
 
-    const configStatsState = { totalSales: chartDataSummaryValue };
+    const configStatsState = { };
 // statsConfig
 
     Object.keys(chartDataValuesByColor).forEach((color) => {
@@ -34,6 +34,7 @@ const useChartConfig = (chartData) => {
         ratingPercentage: `${Math.trunc(
           (chartDataValuesByColor[color] / chartDataSummaryValue) * 100
         )}%`,
+        totalSales: chartDataValuesByColor[color],
       };
     });
 
@@ -42,7 +43,6 @@ const useChartConfig = (chartData) => {
     newChartState[id] = !newChartState[id];
     setConfigColorState(newChartState);
   };
-
   return { configColorState, configStatsState, onConfigValueChange };
 };
 

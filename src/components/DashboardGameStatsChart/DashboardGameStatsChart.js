@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext} from "react";
 import { nanoid } from "nanoid";
 import Flex from "../Flex";
 
@@ -51,7 +51,11 @@ function DashboardGameStatsChart() {
                     </Rating>
                     <Specification>
                       {" "}
-                      {configStatsState.totalSales} sales
+                      {Object.keys(configStatsState).map(
+                        (color) =>
+                          color === item &&
+                          configStatsState[color].totalSales
+                      )} sales
                     </Specification>
                   </Flex>
                 </Flex>
