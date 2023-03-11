@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dashboard/static/css/main.55806605.css",
-    "main.js": "/dashboard/static/js/main.3199098f.js",
+    "main.css": "/dashboard/static/css/main.ec478b6d.css",
+    "main.js": "/dashboard/static/js/main.74cb0de1.js",
     "static/js/787.545aecf5.chunk.js": "/dashboard/static/js/787.545aecf5.chunk.js",
     "static/media/Metropolis-Medium.otf": "/dashboard/static/media/Metropolis-Medium.cdcce86268fb4a504ff5.otf",
     "static/media/Metropolis-Regular.otf": "/dashboard/static/media/Metropolis-Regular.67a1988d7b65b0aaa16d.otf",
@@ -21,13 +21,14 @@
     "static/media/dashboard.svg": "/dashboard/static/media/dashboard.8af513da52ef450c80e1c9441083e4b1.svg",
     "static/media/Select.svg": "/dashboard/static/media/Select.f4f38b9bad8920305c228ced868eac7f.svg",
     "static/media/user_light.svg": "/dashboard/static/media/user_light.8dde2b7ce2a10f218aad328e6c8f9f4e.svg",
+    "static/media/action-menu.svg": "/dashboard/static/media/action-menu.6e2f6a1a9530698de39f971b6a4157e1.svg",
     "static/media/arrow-down.svg": "/dashboard/static/media/arrow-down.08319377d0864961e7dc1f6adea2ee85.svg",
-    "main.55806605.css.map": "/dashboard/static/css/main.55806605.css.map",
-    "main.3199098f.js.map": "/dashboard/static/js/main.3199098f.js.map",
+    "main.ec478b6d.css.map": "/dashboard/static/css/main.ec478b6d.css.map",
+    "main.74cb0de1.js.map": "/dashboard/static/js/main.74cb0de1.js.map",
     "787.545aecf5.chunk.js.map": "/dashboard/static/js/787.545aecf5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.55806605.css",
-    "static/js/main.3199098f.js"
+    "static/css/main.ec478b6d.css",
+    "static/js/main.74cb0de1.js"
   ]
 }
