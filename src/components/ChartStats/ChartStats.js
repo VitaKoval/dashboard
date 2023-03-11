@@ -14,26 +14,27 @@ function ChartStats({ data, value }) {
   const colorsMapper = {green: "#3CDC86", blue: "#18A0FB", red: "#ED2D95"}
 
   return (
-    // <ResponsiveContainer width="100%" height="100%">
+
+    // <div style={{ maxWidth: '903px', maxHeight: '248px' }}>
+      <ResponsiveContainer width='90%' maxHeight={248}>
     <AreaChart
-      width={903}
-      height={248}
+      //  width={903}
+      // height={248}
       data={data}
       margin={{
         top: 8,
         right: 23,
-        left: 17,
+        left: 0,
         bottom: 0,
       }}
     >
-      <CartesianGrid strokeDasharray="1" />
+     
       <XAxis dataKey="date" />
-      <YAxis />
+        <YAxis />
+         <CartesianGrid strokeDasharray="1" />
       <Tooltip />
       
       {Object.keys(value).map((item) => {
-        // console.log(value);
-
         if (value[item]) {
           return (
             <Area
@@ -49,8 +50,9 @@ function ChartStats({ data, value }) {
         }
         return;
       })}
-    </AreaChart>
-    // </ResponsiveContainer>
+        </AreaChart>
+       </ResponsiveContainer>
+  //  </div>
   );
 }
 

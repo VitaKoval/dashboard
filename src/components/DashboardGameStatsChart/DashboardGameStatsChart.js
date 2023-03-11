@@ -13,7 +13,8 @@ import ChartStats from "../ChartStats";
 function DashboardGameStatsChart() {
   const { data, error, loading } = useContext(DashboardContext);
 
-  const [configState, onConfigValueChange] = useChartConfig(data?.chartData);
+  const { configColorState, configStatsState, onConfigValueChange } =
+    useChartConfig(data?.chartData);
 
   return (
     <Flex column>
@@ -22,55 +23,40 @@ function DashboardGameStatsChart() {
         text="Data type"
         selectedFilterValue="Graph"
       />
-      <Flex gap={50}>
-        <Flex>
-          {!loading && <ChartStats data={data.chartData} value={configState} />}
+      <Flex >
+        <Flex flexGrow={1}>
+          {!loading && (
+            <ChartStats data={data.chartData} value={configColorState} />
+          )}
         </Flex>
 
-        <Flex>
+        <Flex flexGrow={1}>
           <Flex column gap={16}>
-            {Object.keys(configState).map((item) => {
-              if (item === "colors") {
-                const colorsItem = configState[item];
-
-                return Object.keys(colorsItem).map((color) => (
-                  <Flex key={nanoid()}>
-                    <CheckboxStats
-                      value={colorsItem[color].checked}
-                      initialColor={color}
-                      onValueChange={onConfigValueChange}
-                    />
-                    <Flex column>
-                      <Rating>
-                        Rating {colorsItem[color].ratingPercentage}
-                      </Rating>
-                      <Specification>
-                        {configState.totalSales} sales
-                      </Specification>
-                    </Flex>
-                  </Flex>
-                ));
-              }
-            })}
-            {/* {Object.keys(configState).map((item) => {
-             
-              if (item === 'colors') {
-                console.log(configState[item]);
-                 return (
+            {Object.keys(configColorState).map((item) => {
+              return (
                 <Flex key={nanoid()}>
                   <CheckboxStats
-                    value={configState[item]}
+                    value={configColorState[item]}
                     initialColor={item}
                     onValueChange={onConfigValueChange}
                   />
                   <Flex column>
-                    <Rating>Rating </Rating>
-                    <Specification>{configState.totalSales} sales</Specification>
+                    <Rating>
+                      Rating{" "}
+                      {Object.keys(configStatsState).map(
+                        (color) =>
+                          color === item &&
+                          configStatsState[color].ratingPercentage
+                      )}
+                    </Rating>
+                    <Specification>
+                      {" "}
+                      {configStatsState.totalSales} sales
+                    </Specification>
                   </Flex>
                 </Flex>
               );
-              }
-            })} */}
+            })}
           </Flex>
         </Flex>
         <Flex flexGrow={1} gap={16}>

@@ -1,61 +1,49 @@
-import { useCallback, useState } from "react";
+import { useState } from "react";
 
 const useChartConfig = (chartData) => {
-  const [configState, setConfigState] = useState({
-    colors: {
-      blue: {
-        checked: true,
-        ratingPercentage: "0%",
-      },
-      red: { checked: true, ratingPercentage: "0%" },
-      green: { checked: true, ratingPercentage: "0%" },
-      orange: { checked: false, ratingPercentage: "0%" },
-      violet: { checked: false, ratingPercentage: "0%" },
-    },
-    totalSales: 0,
-  });
+  const [configColorState, setConfigColorState] = useState({
+    blue: true,
+    red: true,
+    green: true,
+    orange: false,
+    violet: false
+  })
 
-    // let chartDataSummaryValue = 0;
-    // const chartDataValuesByColor = {};
+    let chartDataSummaryValue = 0;
+    const chartDataValuesByColor = {};
 
-    // if (chartData) {
-    //   chartData.forEach((element) => {
-    //     Object.keys(element).forEach((key) => {
-    //       if (key !== "date") {
-    //         chartDataSummaryValue += element[key];
-    //         chartDataValuesByColor[key] =
-    //           chartDataValuesByColor[key] !== undefined
-    //             ? (chartDataValuesByColor[key] += element[key])
-    //             : (chartDataValuesByColor[key] = 0);
-    //       }
-    //     });
-    //   });
-    // }
+    if (chartData) {
+      chartData.forEach((element) => {
+        Object.keys(element).forEach((key) => {
+          if (key !== "date") {
+            chartDataSummaryValue += element[key];
+            chartDataValuesByColor[key] =
+              chartDataValuesByColor[key] !== undefined
+                ? (chartDataValuesByColor[key] += element[key])
+                : (chartDataValuesByColor[key] = 0);
+          }
+        });
+      });
+    }
 
-    // const tempConfig = { colors: {}, totalSales: chartDataSummaryValue };
+    const configStatsState = { totalSales: chartDataSummaryValue };
+// statsConfig
 
-    // Object.keys(chartDataValuesByColor).forEach((color) => {
-    //   tempConfig[color] = {
-    //     checked: configState[color].checked,
-    //     ratingPercentage: `${Math.trunc(
-    //       (chartDataValuesByColor[color] / chartDataSummaryValue) * 100
-    //     )}%`,
-    //   };
-    // });
-
-    // setConfigState(tempConfig);
-    // console.log(configState);
-  
-
-
+    Object.keys(chartDataValuesByColor).forEach((color) => {
+      configStatsState[color] = {
+        ratingPercentage: `${Math.trunc(
+          (chartDataValuesByColor[color] / chartDataSummaryValue) * 100
+        )}%`,
+      };
+    });
 
   const onConfigValueChange = (id) => {
-    const newChartState = { ...configState };
+    const newChartState = { ...configColorState };
     newChartState[id] = !newChartState[id];
-    setConfigState(newChartState);
+    setConfigColorState(newChartState);
   };
 
-  return [configState, onConfigValueChange];
+  return { configColorState, configStatsState, onConfigValueChange };
 };
 
 export default useChartConfig;
