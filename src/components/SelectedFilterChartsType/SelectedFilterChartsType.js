@@ -10,33 +10,34 @@ function SelectedFilterChartsType({ onSelectedChange }) {
 
   return (
     <Flex column width="330px" onChange={onValueChange}>
-      <Label>
+      
         <Input type="radio" id="diagrams" name="type_chart" value="Diagrams" />
-       Diagrams
+       <Label htmlFor="diagrams">Diagrams
       </Label>
-      <Label>
+      
         <Input
           type="radio"
           id="graph"
           name="type_chart"
-          value="Graph"
+        value="Graph"
+        defaultChecked
         />
-        Graph
+        <Label htmlFor="graph">Graph
       </Label>
 
-      <Label>
+      
         <Input type="radio" id="table" name="type_chart" value="Table" />
-        Table
+        <Label htmlFor="table">Table
       </Label>
 
-      <Label>
+      
         <Input
           type="radio"
           id="paragraph"
           name="type_chart"
           value="Paragraph"
         />
-        Paragraph
+        <Label htmlFor="paragraph">Paragraph
           </Label>
           
           

@@ -9,38 +9,25 @@ function SelectedFilterPieLocation({ onSelectedChange }) {
 
   return (
     <Flex column width="237px" onChange={onValueChange}>
-      <Label>
-        Charlottetown
-        <Input
-          type="radio"
-          id="charlottetown"
-          name="location"
-          value="Charlottetown"
-        />
-      </Label>
-      <Label>
-        Halifax
-        <Input type="radio" id="halifax" name="location" value="Halifax" />
-      </Label>
+      <Input
+        type="radio"
+        id="charlottetown"
+        name="location"
+        value="Charlottetown"
+      />
+      <Label htmlFor="charlottetown">Charlottetown </Label>
 
-      <Label>
-        Naperville
-        <Input
-          type="radio"
-          id="naperville"
-          name="location"
-          value="Naperville"
-        />
-      </Label>
+      <Input type="radio" id="halifax" name="location" value="Halifax" />
+      <Label htmlFor="halifax">Halifax</Label>
 
-      <Label>
-        Vernon
-        <Input type="radio" id="vernon" name="location" value="Vernon" />
-      </Label>
-      <Label>
-        Monreal
-        <Input type="radio" id="monreal" name="location" value="Monreal" />
-      </Label>
+      <Input type="radio" id="naperville" name="location" value="Naperville" defaultChecked/>
+      <Label htmlFor="naperville">Naperville</Label>
+
+      <Input type="radio" id="vernon" name="location" value="Vernon" />
+      <Label htmlFor="vernon">Vernon</Label>
+
+      <Input type="radio" id="monreal" name="location" value="Monreal" />
+      <Label htmlFor="monreal">Monreal</Label>
     </Flex>
   );
 }

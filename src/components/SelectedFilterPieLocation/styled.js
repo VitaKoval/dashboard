@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
+import tablerCheck from '../../images/tabler_check.svg'
+
 export const Label = styled.label`
-padding: 8px 24px;
+padding: 12px 16px;
 font-size: 14px;
 line-height: 1.43;
 
@@ -16,18 +18,12 @@ cursor: pointer;
 }
 
  &::after {
-          content: 'ff';
+          content: '';
           width: 20px;
           height: 20px;
 
-          border: 1px solid red;
           margin-left: auto;
       }
-
-      /* input:checked {
-         border: 1px solid white;
-      } */
-
 `
 export const Input = styled.input`
 margin-left: auto;
@@ -36,11 +32,12 @@ position: absolute;
   z-index: -1;
   opacity: 0;
 
-  &:checked {
-    ${Label}::after {
-     border: 1px solid white;
-   
-    border-radius: 4px;
-  }
+  &:checked{
+    &+${Label}::after {
+      background-image: url(${tablerCheck});
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
   } 
 `
+
