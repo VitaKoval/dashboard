@@ -1,29 +1,36 @@
-import React, { useContext} from "react";
+import React, { useContext, useState } from "react";
 import { nanoid } from "nanoid";
 import Flex from "../Flex";
 
-import { Rating, Specification, UserDate, UserName } from "./styled";
+import { Label, Rating, Specification, UserDate, UserName } from "./styled";
 import CardHeader from "../CardHeader/CardHeader";
 import DashboardContext from "../../context/DashboardContext";
 
 import useChartConfig from "../../hooks/useChartConfig";
 import CheckboxStats from "../Checkbox/CheckboxStats";
 import ChartStats from "../ChartStats";
+import SelectedFilterCharts from "../SelectedFilterCharts/SelectedFilterCharts";
 
 function DashboardGameStatsChart() {
   const { data, error, loading } = useContext(DashboardContext);
-
   const { configColorState, configStatsState, onConfigValueChange } =
     useChartConfig(data?.chartData);
+  const [selectTypeChart, setSelectTypeChart] = useState('Graph');
+
+  const onSelectedChamge = (select) => {
+    setSelectTypeChart(select)
+  }
 
   return (
     <Flex column>
       <CardHeader
         title="Game Stats"
         text="Data type"
-        selectedFilterValue="Graph"
-      />
-      <Flex >
+        selectedFilterValue={selectTypeChart}
+      >
+        <SelectedFilterCharts onSelectedChamge={ onSelectedChamge}/>
+      </CardHeader>
+      <Flex>
         <Flex flexGrow={1}>
           {!loading && (
             <ChartStats data={data.chartData} value={configColorState} />
@@ -53,9 +60,9 @@ function DashboardGameStatsChart() {
                       {" "}
                       {Object.keys(configStatsState).map(
                         (color) =>
-                          color === item &&
-                          configStatsState[color].totalSales
-                      )} sales
+                          color === item && configStatsState[color].totalSales
+                      )}{" "}
+                      sales
                     </Specification>
                   </Flex>
                 </Flex>

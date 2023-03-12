@@ -42,6 +42,6 @@ export const Icon = styled.div`
 margin-right: 8px;
 `
 
-export const Select = styled.div`
+export const Select = styled.p`
 
 `

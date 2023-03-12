@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   Container,
@@ -11,19 +11,29 @@ import {
 // icons
 import { ReactComponent as ArrowDown } from "../../images/icons/arrow-down.svg";
 import Flex from "../Flex";
+import SelectedMenu from "../SelectedMenu/SelectedMenu";
 
 // TopBlock
-function CardHeader({ title, text, selectedFilterValue, icon }) {
+function CardHeader({ title, text, selectedFilterValue, icon, children }) {
+  const [isOpenSelectMenu, setIsOpenSelectMenu] = useState(false);
+
   return (
     <Container>
       <Flex align="center">
         <TitleCardHeader>{title}</TitleCardHeader>
         <TextCardHeader>{text}</TextCardHeader>
-        <SelectedFilter>
-          <Icon>{icon}</Icon>
-          <Select>{selectedFilterValue}</Select>
-          <ArrowDown />
-        </SelectedFilter>
+        <Flex position="relative">
+          <SelectedFilter
+            onClick={() => setIsOpenSelectMenu(!isOpenSelectMenu)}
+          >
+            <Icon>{icon}</Icon>
+            <Select>{selectedFilterValue}</Select>
+            <ArrowDown />
+          </SelectedFilter>
+          <SelectedMenu isOpenSelectMenu={isOpenSelectMenu}>
+            {children}
+          </SelectedMenu>
+        </Flex>
       </Flex>
     </Container>
   );
