@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import Flex from "../Flex";
-import { Input, Label } from "./styled";
+import { Input, InputContainer, Label } from "./styled";
 import { nanoid } from "nanoid";
 
 function SelectFilterTableSettings() {
   const [checkboxList, setCheckboxList] = useState({
-    Source: false,
+    'Source': false,
     "Card model": true,
-    "Card number": false,
     "Card number": false,
     "Card name": true,
     'Type': true,
@@ -19,11 +18,10 @@ function SelectFilterTableSettings() {
     'Price': true,
   });
 
-  function handleChange(evt) {
+  function handleChange(id) {
     Object.keys(checkboxList).forEach((key) => {
-      if (key === evt.target.value) {
+      if (id === key) {
         const newCheckboxList = { ...checkboxList };
-
         newCheckboxList[key] = !newCheckboxList[key];
         setCheckboxList(newCheckboxList);
       }
@@ -34,16 +32,18 @@ function SelectFilterTableSettings() {
     <Flex column width="300px" height='300px' overflow='scroll'>
       {Object.keys(checkboxList).map((key) => {
         return (
-          <Label key={nanoid()}>
-            {key}
+          <InputContainer key={nanoid()}> 
             <Input
               type="checkbox"
               name="table_settings"
               value={key}
+              id={key}
               checked={checkboxList[key]}
-              onChange={handleChange}
+              onChange={()=>handleChange(key)}
             />
-          </Label>
+            <Label htmlFor={key} >
+            {key} </Label>
+             </InputContainer>
         );
       })}
     </Flex>

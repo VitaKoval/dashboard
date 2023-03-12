@@ -3,7 +3,7 @@ import styled from "styled-components";
 import tablerCheck from '../../images/tabler_check.svg'
 
 export const Label = styled.label`
-padding: 12px 16px;
+padding: 12px px;
 font-size: 14px;
 line-height: 1.43;
 

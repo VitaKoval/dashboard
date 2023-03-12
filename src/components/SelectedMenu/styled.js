@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.ul`
+export const Container = styled.div`
 position: absolute;
-top: 10px;
+top: 27px;
 right: 0;
 z-index: 5;
 width: ${props => props.width +'px' || '100%'};
