@@ -10,5 +10,6 @@ width: ${props => props.width};
 height: ${({ height }) => height};
 overflow: ${props => props.overflow};
 position: ${props => props.position};
-gap: ${props => props.gap + 'px'}
+gap: ${props => props.gap + 'px'};
+transform: ${props => props.transform}
 `

@@ -1,4 +1,4 @@
-import React, { useContext} from "react";
+import React, { useContext, useState} from "react";
 import DashboardContext from "../../context/DashboardContext";
 
 import {
@@ -12,6 +12,7 @@ import { ReactComponent as SettingLight } from "../../images/icons/setting-light
 import { ReactComponent as ActionMenu } from "../../images/icons/action-menu.svg";
 import Flex from "../Flex";
 import CardHeader from "../CardHeader/CardHeader";
+import SelectFilterTableSettings from "../SelectFilterTableSettings/SelectFilterTableSettings";
 
 function DashboardGeneralSalesTable() {
   const { data, error, loading } = useContext(DashboardContext);
@@ -22,7 +23,9 @@ function DashboardGeneralSalesTable() {
         title="General Sales / Time"
         selectedFilterValue="Table settings"
         icon={<SettingLight />}
-      />
+      >
+        <SelectFilterTableSettings/>
+      </CardHeader>
       <TableRow header>
         <TableCell flexGrow={3}>Card model</TableCell>
         <TableCell flexGrow={3} >Card name</TableCell>

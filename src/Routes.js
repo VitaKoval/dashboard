@@ -12,7 +12,6 @@ function RoutesPage() {
         <Route path="/wear" element={<h1>WEAR PAGE</h1>} />
         <Route path="/games" element={<h1>GAMES PAGE</h1>} />
         <Route path="/settings" element={<h1>SETTINGS PAGE</h1>} />
-        <Route path="/games" element={<h1>GAMES PAGE</h1>} />
       </Route>
     </Routes>
   );

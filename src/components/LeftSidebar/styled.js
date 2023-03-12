@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -8,19 +9,25 @@ export const Container = styled.div`
 
   position: relative;
 `;
-export const MenuContainer = styled.ul`
+export const MenuContainer = styled.div`
   margin-top: 46px;
 `;
 
-export const MenuItem = styled.li`
+export const MenuItem = styled(Link).attrs(
+  (props) => ({
+    to: props.to
+  })
+)`
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   padding: 12px;
-  background-color: var(--color-bg-base);
   border-radius: 50%;
 
-  stroke: var(--color-icon-base);
+  background-color: ${props=> props.isActive ? 'var(--color-bg-active)' : 'var(--color-bg-base)'} ;
+  
+  stroke:${props=> props.isActive ? 'var(--color-icon-active)' : 'var(--color-icon-base)' };
   transition: all 250ms linear;
 
   &:not(:last-child) {

@@ -24,6 +24,10 @@ cursor: pointer;
           margin-left: auto;
       }
 
+      /* input:checked {
+         border: 1px solid white;
+      } */
+
 `
 export const Input = styled.input`
 margin-left: auto;
@@ -34,8 +38,8 @@ position: absolute;
 
   &:checked {
     ${Label}::after {
-     
-    background-color: var(--color-hover);
+     border: 1px solid white;
+   
     border-radius: 4px;
   }
   } 

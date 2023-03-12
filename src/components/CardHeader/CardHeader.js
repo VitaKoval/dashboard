@@ -28,7 +28,13 @@ function CardHeader({ title, text, selectedFilterValue, icon, children }) {
           >
             <Icon>{icon}</Icon>
             <Select>{selectedFilterValue}</Select>
-            <ArrowDown />
+            <Flex
+              align="center"
+              justify="center"
+              transform={isOpenSelectMenu ? "rotate(180deg)" : "initial"}
+            >
+              <ArrowDown />
+            </Flex>
           </SelectedFilter>
           <SelectedMenu isOpenSelectMenu={isOpenSelectMenu}>
             {children}

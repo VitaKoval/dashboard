@@ -4,7 +4,6 @@ import { Input, Label } from "./styled";
 
 function SelectedFilterPieLocation({ onSelectedChange }) {
   const onValueChange = (evt) => {
-    console.log(evt.target.value);
     onSelectedChange(evt.target.value);
   };
 
