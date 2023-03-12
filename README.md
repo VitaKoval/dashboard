@@ -1,20 +1,19 @@
+[https://vitakoval.github.io/dashboard]
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Tech Stack
+## Реалізація
 
-HTML5
-Emotion(css styled)
-React, React Router DOM
-JavaScript
-API
-AXIOS
-PropTypes
-React Hooks: useLocation, useState, useEffect, useParams
-React.lazy() та Suspense (відкладене динамічне завантаження модулів)
-Promises
-Async / Await
+1. Реалізовано перехід між сторінками через сайдбар (React Router DOM)
+2. Данні для сторінки Dashboard відмальовуються динамічно.
+3. Стилізація за допомогою бібліотеки styled-components
+4. Створено базові компоненти. Всі компоненти не містять нативних тегів HTML.
+5. Графік реалізовано за допомогою бібліотеки Recharts [https://recharts.org/en-US/guide]
+6. Реалізовано відображення даних відповідно до вибраних показників (blue, red, green).
+7. Реалізовано випадаюче меню з кастомними радіо-кнопками та чекбоксами. Всі данні збираються, в подальшому достатньо підключити до вибору виду графікуб локації або колонок таблиці.
+8. В реалізації збору данних використано кастомні хуки.
 
 # Підготовка проєкту до розробки
 
@@ -25,4 +24,5 @@ Async / Await
 
 ## Деплой
 
+[https://vitakoval.github.io/dashboard]
 #npm run deploy - продакшн версія проекту автоматично проходить лінтінг, збирається і деплоїться на GitHub Pages.

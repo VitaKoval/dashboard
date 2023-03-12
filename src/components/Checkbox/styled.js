@@ -18,7 +18,7 @@ const handleColortype = (color) => {
 };
 
 export const CheckBox = styled.div`
-fill: ${(props) => handleColortype(props.fill)};
-stroke: ${props=> handleColortype(props.stroke)};
-margin-right: 16px;
-`
+  fill: ${(props) => handleColortype(props.fill)};
+  stroke: ${(props) => handleColortype(props.stroke)};
+  margin-right: 16px;
+`;

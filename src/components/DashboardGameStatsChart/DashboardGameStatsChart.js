@@ -1,25 +1,24 @@
 import React, { useContext, useState } from "react";
 import { nanoid } from "nanoid";
-import Flex from "../Flex";
-
-import {Rating, Specification, UserDate, UserName } from "./styled";
-import CardHeader from "../CardHeader/CardHeader";
 import DashboardContext from "../../context/DashboardContext";
+import { Rating, Specification, UserDate, UserName } from "./styled";
 
-import useChartConfig from "../../hooks/useChartConfig";
+import Flex from "../Flex";
+import CardHeader from "../CardHeader/CardHeader";
 import CheckboxStats from "../Checkbox/CheckboxStats";
 import ChartStats from "../ChartStats";
 import SelectedFilterChartsType from "../SelectedFilterChartsType";
+import useChartConfig from "../../hooks/useChartConfig";
 
 function DashboardGameStatsChart() {
   const { data, error, loading } = useContext(DashboardContext);
   const { configColorState, configStatsState, onConfigValueChange } =
     useChartConfig(data?.chartData);
-  const [selectTypeChart, setSelectTypeChart] = useState('Graph');
+  const [selectTypeChart, setSelectTypeChart] = useState("Graph");
 
   const onSelectedChamge = (select) => {
-    setSelectTypeChart(select)
-  }
+    setSelectTypeChart(select);
+  };
 
   return (
     <Flex column>
@@ -28,7 +27,7 @@ function DashboardGameStatsChart() {
         text="Data type"
         selectedFilterValue={selectTypeChart}
       >
-        <SelectedFilterChartsType onSelectedChange={ onSelectedChamge}/>
+        <SelectedFilterChartsType onSelectedChange={onSelectedChamge} />
       </CardHeader>
       <Flex>
         <Flex flexGrow={1}>

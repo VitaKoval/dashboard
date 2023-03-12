@@ -15,9 +15,6 @@ export const TableRow = styled.div`
   height: 72px;
   padding: 16px 32px;
 
-  /* outline: 1px solid yellow; */
-  
-
   ${(props) =>
     props.header &&
     css`
@@ -41,15 +38,10 @@ export const TableCell = styled.div`
   flex-basis: 0;
 
   text-align: ${(props) => props.center && "center"};
-  min-width: ${props => props.width + 'px' || '100%'};
-
-  /* outline: 1px solid red; */
-  
+  min-width: ${(props) => props.width + "px" || "100%"};
 `;
 
-export const CellData = styled.span`
-
-`
+export const CellData = styled.span``;
 
 export const Image = styled.img.attrs((props) => ({
   src: props.src || defaultImg,

@@ -1,24 +1,27 @@
 import React, { useState } from "react";
-import { flushSync } from "react-dom";
 import CardHeader from "../CardHeader/CardHeader";
 
 import Flex from "../Flex";
+import Loader from "../Loader";
 import SelectedFilterPieLocation from "../SelectedFilterPieLocation";
 
-
 function DaschboardGameStatsPieChart() {
-  const [selectLocation, setSelectLocation] = useState('Naperville');
+  const [selectLocation, setSelectLocation] = useState("Naperville");
 
   const onSelectedChamge = (select) => {
-    setSelectLocation(select)
-  }
+    setSelectLocation(select);
+  };
   return (
     <>
-      <CardHeader title="Game Stats" text="Location" selectedFilterValue={selectLocation}>
-        <SelectedFilterPieLocation onSelectedChange={onSelectedChamge}/>
+      <CardHeader
+        title="Game Stats"
+        text="Location"
+        selectedFilterValue={selectLocation}
+      >
+        <SelectedFilterPieLocation onSelectedChange={onSelectedChamge} />
       </CardHeader>
-      <Flex position='relative' height='100%' width='100%'>
-       
+      <Flex position="relative" height="60%">
+        <Loader />
       </Flex>
     </>
   );

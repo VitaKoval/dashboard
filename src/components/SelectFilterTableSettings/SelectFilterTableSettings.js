@@ -1,49 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
+import useTableConfig from "../../hooks/useTableConfig";
 import Flex from "../Flex";
-import { Input, InputContainer, Label } from "./styled";
+import { CheckBox, Input, InputContainer, Label } from "./styled";
 import { nanoid } from "nanoid";
 
 function SelectFilterTableSettings() {
-  const [checkboxList, setCheckboxList] = useState({
-    'Source': false,
-    "Card model": true,
-    "Card number": false,
-    "Card name": true,
-    'Type': true,
-    'Limited': true,
-    "№ Operations": true,
-    "Date of lost operations": true,
-    'Rating': true,
-    'Status': true,
-    'Price': true,
-  });
-
-  function handleChange(id) {
-    Object.keys(checkboxList).forEach((key) => {
-      if (id === key) {
-        const newCheckboxList = { ...checkboxList };
-        newCheckboxList[key] = !newCheckboxList[key];
-        setCheckboxList(newCheckboxList);
-      }
-    });
-  }
+  const [checkboxList, handleChange] = useTableConfig();
 
   return (
-    <Flex column width="300px" height='300px' overflow='scroll'>
+    <Flex column width="300px" height="300px" overflow="scroll">
       {Object.keys(checkboxList).map((key) => {
         return (
-          <InputContainer key={nanoid()}> 
+          <InputContainer key={nanoid()}>
             <Input
               type="checkbox"
               name="table_settings"
               value={key}
               id={key}
               checked={checkboxList[key]}
-              onChange={()=>handleChange(key)}
+              onChange={() => handleChange(key)}
             />
-            <Label htmlFor={key} >
-            {key} </Label>
-             </InputContainer>
+
+            <Label htmlFor={key}>
+              {key} <CheckBox checked={checkboxList[key]} />{" "}
+            </Label>
+          </InputContainer>
         );
       })}
     </Flex>

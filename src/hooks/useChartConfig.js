@@ -6,37 +6,36 @@ const useChartConfig = (chartData) => {
     red: true,
     green: true,
     orange: false,
-    violet: false
-  })
+    violet: false,
+  });
 
-    let chartDataSummaryValue = 0;
-    const chartDataValuesByColor = {};
+  let chartDataSummaryValue = 0;
+  const chartDataValuesByColor = {};
 
-    if (chartData) {
-      chartData.forEach((element) => {
-        Object.keys(element).forEach((key) => {
-          if (key !== "date") {
-            chartDataSummaryValue += element[key];
-            chartDataValuesByColor[key] =
-              chartDataValuesByColor[key] !== undefined
-                ? (chartDataValuesByColor[key] += element[key])
-                : (chartDataValuesByColor[key] = 0);
-          }
-        });
+  if (chartData) {
+    chartData.forEach((element) => {
+      Object.keys(element).forEach((key) => {
+        if (key !== "date") {
+          chartDataSummaryValue += element[key];
+          chartDataValuesByColor[key] =
+            chartDataValuesByColor[key] !== undefined
+              ? (chartDataValuesByColor[key] += element[key])
+              : (chartDataValuesByColor[key] = 0);
+        }
       });
-    }
-
-    const configStatsState = { };
-// statsConfig
-
-    Object.keys(chartDataValuesByColor).forEach((color) => {
-      configStatsState[color] = {
-        ratingPercentage: `${Math.trunc(
-          (chartDataValuesByColor[color] / chartDataSummaryValue) * 100
-        )}%`,
-        totalSales: chartDataValuesByColor[color],
-      };
     });
+  }
+
+  const configStatsState = {};
+
+  Object.keys(chartDataValuesByColor).forEach((color) => {
+    configStatsState[color] = {
+      ratingPercentage: `${Math.trunc(
+        (chartDataValuesByColor[color] / chartDataSummaryValue) * 100
+      )}%`,
+      totalSales: chartDataValuesByColor[color],
+    };
+  });
 
   const onConfigValueChange = (id) => {
     const newChartState = { ...configColorState };

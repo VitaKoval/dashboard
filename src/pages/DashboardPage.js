@@ -4,21 +4,19 @@ import DashboardStateContext from "../context/DashboardState";
 import PageLayoutWrapper from "../components/PageLayoutWrapper";
 import SectionLayoutWrapper from "../components/SectionLayoutWrapper";
 import Flex from "../components/Flex";
-// components
 import DashboardStatistics from "../components/DashboardStatistics";
 import DashboardCard from "../components/DashboardCard";
 import DashboardGameStatsChart from "../components/DashboardGameStatsChart";
 import DaschboardGameStatsPieChart from "../components/DaschboardGameStatsPieChart";
 import DashboardGeneralSalesTable from "../components/DashboardGeneralSalesTable";
 
-function DashboardPage(params) {
+function DashboardPage() {
   return (
     <DashboardStateContext>
       <PageLayoutWrapper>
         <SectionLayoutWrapper>
           <DashboardStatistics />
         </SectionLayoutWrapper>
-
         <SectionLayoutWrapper>
           <Flex gap={16}>
             <DashboardCard flex={3} height={344}>

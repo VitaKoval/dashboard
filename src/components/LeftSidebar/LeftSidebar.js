@@ -1,12 +1,7 @@
 import React from "react";
-import {
-  Container,
-  MenuContainer,
-  SLink,
-  SLinkContainer,
-} from "./styled";
+import { Container, MenuContainer, SLink, SLinkContainer } from "./styled";
 import Flex from "../Flex";
-import {nanoid} from 'nanoid';
+import { nanoid } from "nanoid";
 // icons
 import { ReactComponent as LogoIcon } from "../../images/logo.svg";
 import { ReactComponent as Dashboard } from "../../images/icons/dashboard.svg";
@@ -22,36 +17,36 @@ function LeftSidebar() {
 
   const menuArray = [
     {
-      label: 'Dashboard',
+      label: "Dashboard",
       icon: <Dashboard />,
-      to: '/',
+      to: "/",
     },
     {
-      label: 'Cards',
+      label: "Cards",
       icon: <Cards />,
-      to: '/cards',
+      to: "/cards",
     },
     {
-      label: 'Product',
+      label: "Product",
       icon: <Product />,
-      to: '/product',
+      to: "/product",
     },
     {
-      label: 'WearTear',
+      label: "WearTear",
       icon: <WearTear />,
-      to: '/wear',
+      to: "/wear",
     },
-     {
-      label: 'Games',
+    {
+      label: "Games",
       icon: <Games />,
-      to: '/games',
+      to: "/games",
     },
-     {
-      label: 'Settings',
+    {
+      label: "Settings",
       icon: <Settings />,
-      to: '/settings',
+      to: "/settings",
     },
-  ]
+  ];
 
   return (
     <Container>
@@ -59,11 +54,11 @@ function LeftSidebar() {
         <LogoIcon />
         <MenuContainer>
           {menuArray.map((item) => {
-            return (<SLinkContainer isActive={pathname === item.to} key={nanoid()}>
-            <SLink to={item.to}>
-             {item.icon}
-            </SLink>
-          </SLinkContainer>)
+            return (
+              <SLinkContainer isActive={pathname === item.to} key={nanoid()}>
+                <SLink to={item.to}>{item.icon}</SLink>
+              </SLinkContainer>
+            );
           })}
         </MenuContainer>
       </Flex>

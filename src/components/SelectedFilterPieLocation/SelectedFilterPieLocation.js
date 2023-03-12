@@ -20,7 +20,13 @@ function SelectedFilterPieLocation({ onSelectedChange }) {
       <Input type="radio" id="halifax" name="location" value="Halifax" />
       <Label htmlFor="halifax">Halifax</Label>
 
-      <Input type="radio" id="naperville" name="location" value="Naperville" defaultChecked/>
+      <Input
+        type="radio"
+        id="naperville"
+        name="location"
+        value="Naperville"
+        defaultChecked
+      />
       <Label htmlFor="naperville">Naperville</Label>
 
       <Input type="radio" id="vernon" name="location" value="Vernon" />
