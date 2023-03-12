@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import img from '../../images/Radio.svg'
 
 export const Label = styled.label`
 padding: 8px 24px;

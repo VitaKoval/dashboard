@@ -1,11 +1,11 @@
 import React from "react";
 import Flex from "../Flex";
-import { Input, Label, Title } from "./styled";
+import { Input, Label} from "./styled";
 
-function SelectedFilterCharts({ onSelectedChamge }) {
+function SelectedFilterChartsType({ onSelectedChange }) {
 
     const onValueChange = (evt) => {
-        onSelectedChamge(evt.target.value)
+        onSelectedChange(evt.target.value)
    }
 
   return (
@@ -44,4 +44,4 @@ function SelectedFilterCharts({ onSelectedChamge }) {
   );
 }
 
-export default SelectedFilterCharts;
+export default SelectedFilterChartsType;

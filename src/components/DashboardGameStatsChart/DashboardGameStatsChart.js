@@ -2,14 +2,14 @@ import React, { useContext, useState } from "react";
 import { nanoid } from "nanoid";
 import Flex from "../Flex";
 
-import { Label, Rating, Specification, UserDate, UserName } from "./styled";
+import {Rating, Specification, UserDate, UserName } from "./styled";
 import CardHeader from "../CardHeader/CardHeader";
 import DashboardContext from "../../context/DashboardContext";
 
 import useChartConfig from "../../hooks/useChartConfig";
 import CheckboxStats from "../Checkbox/CheckboxStats";
 import ChartStats from "../ChartStats";
-import SelectedFilterCharts from "../SelectedFilterCharts/SelectedFilterCharts";
+import SelectedFilterChartsType from "../SelectedFilterChartsType";
 
 function DashboardGameStatsChart() {
   const { data, error, loading } = useContext(DashboardContext);
@@ -28,7 +28,7 @@ function DashboardGameStatsChart() {
         text="Data type"
         selectedFilterValue={selectTypeChart}
       >
-        <SelectedFilterCharts onSelectedChamge={ onSelectedChamge}/>
+        <SelectedFilterChartsType onSelectedChange={ onSelectedChamge}/>
       </CardHeader>
       <Flex>
         <Flex flexGrow={1}>
